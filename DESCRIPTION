@@ -1,0 +1,8 @@
+Package: weatheR
+Title: Package for weather data scraping and analysis
+Version: 0.1
+Authors: Hendrik Mahlkow
+Description: This package provides functions to scrape weather data from the NOAA and perform various weather-related tasks.
+License: MIT
+Encoding: UTF-8
+RoxygenNote: 7.1.1
