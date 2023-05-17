@@ -5,22 +5,25 @@
 #' 
 #' @param usaf USAF identifier of the weather station.
 #' @param wban WBAN identifier of the weather station.
-#' @param begin_year Beginning year of the weather data.
-#' @param end_year Ending year of the weather data.
+#' @param year Year of the weather data.
 #' @param dict Directory to save the weather data files.
 #' 
 #' @export
 
-download_weather_data <- function(usaf, wban, begin_year, end_year, dict) {
-  base_url <- "https://www1.ncdc.noaa.gov/pub/data/noaa"
+download_weather_data <- function(usaf, wban, year, dict) {
+  # Create station ID
   station_id <- paste0(usaf, "-", wban)
   
-  for (year in begin_year:end_year) {
-    file <- paste0(station_id, "-", year, ".gz")
-    url <- file.path(base_url, year, file)
-    
-    # Download the weather data file
-    destfile <- file.path(dict, file)
-    download.file(url, destfile = destfile, method = "curl")
-  }
+  # Construct the file name
+  file <- paste0(station_id, "-", year, ".gz")
+  
+  # Construct the URL
+  base_url <- "https://www1.ncdc.noaa.gov/pub/data/noaa"
+  url <- file.path(base_url, year, file)
+  
+  # Construct the destination file path
+  destfile <- file.path(dict, file)
+  
+  # Download the file
+  download.file(url, destfile, method = "curl")
 }
