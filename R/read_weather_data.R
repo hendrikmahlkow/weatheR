@@ -56,7 +56,7 @@ read_weather_data <- function(file) {
   data$temp[data$temp == 9999] <- NA
   data$dew_point[data$dew_point == 9999] <- NA
   data$atmos_pres[data$atmos_pres == 99999] <- NA
-  data$ceil_hgt[data$ceil_hgt == 9999] <- NA
+  data$ceil_hgt[data$ceil_hgt == 99999] <- NA
   data$visibility[data$visibility == 999999] <- NA
   
   # Divide variables by 10
