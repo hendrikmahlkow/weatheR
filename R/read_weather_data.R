@@ -1,11 +1,30 @@
 #' Read weather data
 #' 
 #' @description
-#' `read_weather_data()` Reads weather data from a file.
+#' Reads weather data, obtained with `download_weather_data()`, from a file. Relative humidity is calculated from temperature and dew point.
 #' 
 #' @return data frame of weather data.
 #' 
 #' @param file Path to the weather data file.
+#' 
+#' @return Returns a data.frame with 10 columns.
+#' \describe{
+#' \item{station_id}{Station ID of the weather station.}
+#' \item{time}{Time of the weather observation in GMT timezone.}
+#' \item{wd}{Wind direction in degrees.}
+#' \item{ws}{Wind speed in meters per second.}
+#' \item{ceil_hgt}{Ceiling height in meters.}
+#' \item{visibility}{Visibility in meters.}
+#' \item{temp}{Temperature in degrees Celsius.}
+#' \item{dew_point}{Dew point in degrees Celsius.}
+#' \item{atmos_pres}{Atmospheric pressure in hPa.}
+#' \item{rh}{Relative humidity in percent.}
+#' }
+#' 
+#' @example \dontrun{
+#' # Read weather data from a file
+#' data <- read_weather_data("data/037070-99999-2017.gz")
+#' }
 #' 
 #' @importFrom lubridate ymd_hm
 #' @importFrom lubridate ymd

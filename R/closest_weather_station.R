@@ -10,6 +10,25 @@
 #' @param stations Data frame of weather stations. Use `available_weather_stations()` to get all available weather stations.
 #' @param n Number of closest weather stations to return.
 #' 
+#' @return Returns a data.frame with 10 columns.
+#' \describe{
+#' \item{latitude}{Latitude of the given location.}
+#' \item{longitude}{Longitude of the given location.}
+#' \item{distance}{Distance in meters between the given location and the closest weather station.}
+#' \item{closest_station_usaf}{USAF identifier of the closest weather station.}
+#' \item{closest_station_wban}{WBAN identifier of the closest weather station.}
+#' \item{closest_station_name}{Name of the closest weather station.}
+#' \item{closest_station_country}{Country of the closest weather station. Note: NOAA don't use ISO country codes.}
+#' \item{closest_station_elev}{Elevation of the closest weather station in meters.}
+#' \item{closest_station_begin_date}{Begin date of the closest weather station.}
+#' \item{closest_station_end_date}{End date of the closest weather station.}
+#' }
+#' 
+#' @examples \dontrun{
+#' # Finds the closest weather station to Berlin, Germany.
+#' station_in_Berlin = closest_weather_station(52.5200, 13.4050, stations)
+#' }
+#' 
 #' @importFrom geosphere distm
 #' @importFrom geosphere distVincentySphere
 #' 

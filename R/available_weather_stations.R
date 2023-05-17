@@ -8,6 +8,11 @@
 #' @param file_dir Directory to save the CSV file. If empty, a temporary directory is created.
 #' @param save_file Logical indicating whether to save the CSV file.
 #' 
+#' @example \dontrun{
+#' # Download all available weather stations from NOAA.
+#' stations <- available_weather_stations()
+#' }
+#' 
 #' @importFrom lubridate ymd
 #' @importFrom readr read_csv
 #' 

@@ -1,16 +1,21 @@
 #' Download weather data from NOAA
 #' 
 #' @description
-#' `download_weather_data()` Downloads weather data from NOAA.
+#' Downloads weather data from [NOAA](https://www.noaa.gov ). The data is downloaded in a compressed `gz` format.
 #' 
-#' @param usaf USAF identifier of the weather station.
-#' @param wban WBAN identifier of the weather station.
+#' @param usaf USAF identifier of the weather station. Togehter with the `wban` identifier, this uniquely identifies the weather station.
+#' @param wban WBAN identifier of the weather station. Togehter with the `usaf` identifier, this uniquely identifies the weather station.
 #' @param year Year of the weather data.
-#' @param dict Directory to save the weather data files.
+#' @param dir Directory to save the weather data files.
+#' 
+#' @example \dontrun{
+#' # Download weather data for the weather station with USAF identifier 037070 and WBAN identifier 99999 for the year 2017.
+#' download_weather_data(usaf = "037070", wban = "99999", year = "2017", dir = "data")
+#' } 
 #' 
 #' @export
 
-download_weather_data <- function(usaf, wban, year, dict) {
+download_weather_data <- function(usaf, wban, year, dir) {
   # Create station ID
   station_id <- paste0(usaf, "-", wban)
   
@@ -22,7 +27,7 @@ download_weather_data <- function(usaf, wban, year, dict) {
   url <- file.path(base_url, year, file)
   
   # Construct the destination file path
-  destfile <- file.path(dict, file)
+  destfile <- file.path(dir, file)
   
   # Download the file
   download.file(url, destfile, method = "curl")
