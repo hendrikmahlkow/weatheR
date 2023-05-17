@@ -1,7 +1,7 @@
 #' Find the closest weather station(s) to a given location
 #' 
 #' @description
-#' `closest_weather_station()` Finds the closest weather station(s) to a given location.
+#' Finds the closest weather station(s) to a given location. The function uses the [geosphere](https://cran.r-project.org/package=geosphere) package to calculate the distances.
 #' 
 #' @return data frame of closest weather station(s).
 #' 
