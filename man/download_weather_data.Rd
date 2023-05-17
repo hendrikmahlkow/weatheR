@@ -4,19 +4,17 @@
 \alias{download_weather_data}
 \title{Download weather data from NOAA}
 \usage{
-download_weather_data(usaf, wban, begin_year, end_year, dict)
+download_weather_data(usaf, wban, year, dir)
 }
 \arguments{
-\item{usaf}{USAF identifier of the weather station.}
+\item{usaf}{USAF identifier of the weather station. Togehter with the `wban` identifier, this uniquely identifies the weather station.}
 
-\item{wban}{WBAN identifier of the weather station.}
+\item{wban}{WBAN identifier of the weather station. Togehter with the `usaf` identifier, this uniquely identifies the weather station.}
 
-\item{begin_year}{Beginning year of the weather data.}
+\item{year}{Year of the weather data.}
 
-\item{end_year}{Ending year of the weather data.}
-
-\item{dict}{Directory to save the weather data files.}
+\item{dir}{Directory to save the weather data files.}
 }
 \description{
-`download_weather_data()` Downloads weather data from NOAA.
+Downloads weather data from [NOAA](https://www.noaa.gov ). The data is downloaded in a compressed `gz` format.
 }

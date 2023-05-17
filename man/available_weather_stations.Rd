@@ -9,11 +9,11 @@ available_weather_stations(file_dir = "", save_file = TRUE)
 \arguments{
 \item{file_dir}{Directory to save the CSV file. If empty, a temporary directory is created.}
 
-\item{save_file}{Logical indicating whether to save the CSV file.}
+\item{save_file}{Logical indicating whether to save the CSV file. If `FALSE``, the CSV file is removed after reading. Default is `TRUE``.}
 }
 \value{
 data frame of available weather stations.
 }
 \description{
-`available_weather_stations()` Downloads all available weather stations from NOAA.
+Downloads all available weather stations from NOAA (around 29,000).
 }

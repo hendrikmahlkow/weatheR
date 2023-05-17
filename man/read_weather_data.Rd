@@ -11,7 +11,21 @@ read_weather_data(file)
 }
 \value{
 data frame of weather data.
+
+Returns a data.frame with 10 columns.
+\describe{
+\item{station_id}{Station ID of the weather station.}
+\item{time}{Time of the weather observation in GMT timezone.}
+\item{wd}{Wind direction in degrees.}
+\item{ws}{Wind speed in meters per second.}
+\item{ceil_hgt}{Ceiling height in meters.}
+\item{visibility}{Visibility in meters.}
+\item{temp}{Temperature in degrees Celsius.}
+\item{dew_point}{Dew point in degrees Celsius.}
+\item{atmos_pres}{Atmospheric pressure in hPa.}
+\item{rh}{Relative humidity in percent.}
+}
 }
 \description{
-`read_weather_data()` Reads weather data from a file.
+Reads weather data, obtained with `download_weather_data()`, from a file. Relative humidity is calculated from temperature and dew point.
 }

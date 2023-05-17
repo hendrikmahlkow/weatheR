@@ -1,12 +1,12 @@
 #' Download available weather stations
 #'
 #' @description
-#' `available_weather_stations()` Downloads all available weather stations from NOAA.
+#' Downloads all available weather stations from NOAA (around 29,000).
 #'
 #' @return data frame of available weather stations.
 #'
 #' @param file_dir Directory to save the CSV file. If empty, a temporary directory is created.
-#' @param save_file Logical indicating whether to save the CSV file.
+#' @param save_file Logical indicating whether to save the CSV file. If `FALSE``, the CSV file is removed after reading. Default is `TRUE``.
 #' 
 #' @example \dontrun{
 #' # Download all available weather stations from NOAA.
