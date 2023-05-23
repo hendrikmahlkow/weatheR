@@ -2,7 +2,7 @@
 
 ***
 
-This package provides weather data for around 28,000 weather stations around the world. The data is provided by the [Global Historical Climatology Network](https://www.ncdc.noaa.gov/ghcn-daily-description) (GHCN-Daily) database. The package provides a function to download the data and to load it into R. The data is provided as a data frame with the following columns: `station_id`, `date`, `element`, `value`, `mflag`, `qflag`, `sflag`, `time`. The data is provided in the [GHCN-Daily format](https://www1.ncdc.noaa.gov/pub/data/cdo/documentation/GHCND_documentation.pdf).
+This package provides weather data for around 28,000 weather stations around the world. The data is provided by the National Oceanic and Atmospheric Administration [Integrated Surface Data](https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database) (ISD) database. The package provides a function to download the data and to load it into R. The data is provided as a data frame with the following columns: `station_id`, `date`, `element`, `value`, `mflag`, `qflag`, `sflag`, `time`. The data is provided in the [ISD-Hourly format](https://www1.ncdc.noaa.gov/pub/data/noaa/readme.txt).
 
 To install and load the package, run the following code:
 
