@@ -2,7 +2,7 @@
 
 ***
 
-This package provides weather data for around 28,000 weather stations around the world. The data is provided by the National Oceanic and Atmospheric Administration (NOAA) [Integrated Surface Data (ISD)](https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database) database. The package provides a function to download the data and to load it into R. The data is provided as a data frame with the following columns: `station_id`, `date`, `element`, `value`, `mflag`, `qflag`, `sflag`, `time`. The data is provided in the [ISD-Hourly format](https://www1.ncdc.noaa.gov/pub/data/noaa/readme.txt).
+This package provides weather data for around 28,000 weather stations around the world. The data is provided by the National Oceanic and Atmospheric Administration's (NOAA) [Integrated Surface Data (ISD)](https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database). The package provides a function to download the data and to load it into R. The data is provided as a data frame with the following columns: `station_id`, `date`, `element`, `value`, `mflag`, `qflag`, `sflag`, `time`. The data is provided in the [ISD-Hourly format](https://www1.ncdc.noaa.gov/pub/data/noaa/readme.txt).
 
 To install and load the package, run the following code:
 
