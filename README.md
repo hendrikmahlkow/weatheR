@@ -4,6 +4,9 @@
 
 This package provides weather data for around 28,000 weather stations around the world. The data is provided by the National Oceanic and Atmospheric Administration's (NOAA) [Integrated Surface Data (ISD)](https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database). The package provides a function to download the data and to load it into R. The data is provided as a data frame with the following columns: `station_id`, `date`, `element`, `value`, `mflag`, `qflag`, `sflag`, `time`. The data is provided in the [ISD-Hourly format](https://www1.ncdc.noaa.gov/pub/data/noaa/readme.txt).
 
+This package is largly inspired by the [stationaRy](https://github.com/rich-iannone/stationaRy) packagy by Richard Iannone. Currently, the package is not updated since 2020 and can't download recent years. This package is an attempt to provide a similar package that is updated and maintained. If Richard updates his package, go over to ```r stationaRy``` as it provides more functionality.
+
+
 To install and load the package, run the following code:
 
 ``` r 
