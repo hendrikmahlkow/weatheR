@@ -29,3 +29,10 @@ Returns a data.frame with 10 columns.
 \description{
 Reads weather data, obtained with `download_weather_data()`, from a file. Relative humidity is calculated from temperature and dew point.
 }
+\examples{
+\dontrun{
+# Read weather data from a file
+data <- read_weather_data("data/037070-99999-2017.gz")
+}
+
+}

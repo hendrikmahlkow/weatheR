@@ -1,8 +1,15 @@
 Package: weatheR
 Title: Package for weather data scraping and analysis
 Version: 0.1
-Author: Hendrik Mahlkow
-Description: This package provides functions to scrape weather data from the NOAA and perform various weather-related tasks.
+Author: 
+    c(person(given = "Hendrik",
+             family = "Mahlkow",
+             role = c("aut", "cre"),
+             email = "mail@hendrikmahlkow.com",
+             comment = c(ORCID = "0000-0002-3186-1773")))
+Description: This package provides functions to scrape weather data from NOAA and perform various weather-related tasks.
+URL: https://github.com/hendrikmahlkow/weatheR
 License: MIT
 Encoding: UTF-8
+LazyData: Yes
 RoxygenNote: 7.1.1

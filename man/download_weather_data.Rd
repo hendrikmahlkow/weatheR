@@ -4,12 +4,10 @@
 \alias{download_weather_data}
 \title{Download weather data from NOAA}
 \usage{
-download_weather_data(usaf, wban, year, dir)
+download_weather_data(station_id, year, dir)
 }
 \arguments{
-\item{usaf}{USAF identifier of the weather station. Togehter with the `wban` identifier, this uniquely identifies the weather station.}
-
-\item{wban}{WBAN identifier of the weather station. Togehter with the `usaf` identifier, this uniquely identifies the weather station.}
+\item{station_id}{Identifier of the closest weather station. Consists of 6-digit USAF and 5-digit WBAN identifier}
 
 \item{year}{Year of the weather data.}
 
@@ -17,4 +15,11 @@ download_weather_data(usaf, wban, year, dir)
 }
 \description{
 Downloads weather data from [NOAA](https://www.noaa.gov ). The data is downloaded in a compressed `gz` format.
+}
+\examples{
+\dontrun{
+# Download weather data for the weather station with USAF identifier 037070 and WBAN identifier 99999 for the year 2017.
+download_weather_data(station_id = "037070-99999", year = "2017", dir = "data")
+} 
+
 }

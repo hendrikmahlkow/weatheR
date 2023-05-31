@@ -16,4 +16,22 @@ data frame of available weather stations.
 }
 \description{
 Downloads all available weather stations from NOAA (around 29,000).
+
+## Columns
+
+- `station_id`: NOAA's two digit country code
+- `name`: country name (English)
+- `country`: FIPS 10-4 country codes
+- `state`: US state (two letter abbreviation) if applicable
+- `icao`: International Civil Aviation Organization (ICAO) identifier
+- `lat`: latitude
+- `lon`: longitude
+- `elev`: elevation (meters)
+- `begin_date`: first date of operation
+- `end_date`: last date of operation
+}
+\examples{
+# Download all available weather stations from NOAA.
+stations <- available_weather_stations()
+
 }

@@ -20,20 +20,17 @@ data frame of closest weather station(s).
 
 Returns a data.frame with 10 columns.
 \describe{
-\item{latitude}{Latitude of the given location.}
-\item{longitude}{Longitude of the given location.}
 \item{distance}{Distance in meters between the given location and the closest weather station.}
-\item{closest_station_usaf}{USAF identifier of the closest weather station.}
-\item{closest_station_wban}{WBAN identifier of the closest weather station.}
-\item{closest_station_name}{Name of the closest weather station.}
-\item{closest_station_country}{Country of the closest weather station. Note: NOAA don't use ISO country codes.}
-\item{closest_station_elev}{Elevation of the closest weather station in meters.}
-\item{closest_station_begin_date}{Begin date of the closest weather station.}
-\item{closest_station_end_date}{End date of the closest weather station.}
+\item{station_id}{Identifier of the closest weather station. Consists of 6-digit USAF and 5-digit WBAN identifier}
+\item{name}{Name of the closest weather station.}
+\item{country}{Country of the closest weather station. Note: NOAA don't use ISO country codes.}
+\item{elev}{Elevation of the closest weather station in meters.}
+\item{begin_date}{Begin date of the closest weather station.}
+\item{end_date}{End date of the closest weather station.}
 }
 }
 \description{
-`closest_weather_station()` Finds the closest weather station(s) to a given location.
+Finds the closest weather station(s) to a given location. The function uses the [geosphere](https://cran.r-project.org/package=geosphere) package to calculate the distances.
 }
 \examples{
 \dontrun{

@@ -12,16 +12,13 @@
 #' 
 #' @return Returns a data.frame with 10 columns.
 #' \describe{
-#' \item{latitude}{Latitude of the given location.}
-#' \item{longitude}{Longitude of the given location.}
 #' \item{distance}{Distance in meters between the given location and the closest weather station.}
-#' \item{closest_station_usaf}{USAF identifier of the closest weather station.}
-#' \item{closest_station_wban}{WBAN identifier of the closest weather station.}
-#' \item{closest_station_name}{Name of the closest weather station.}
-#' \item{closest_station_country}{Country of the closest weather station. Note: NOAA don't use ISO country codes.}
-#' \item{closest_station_elev}{Elevation of the closest weather station in meters.}
-#' \item{closest_station_begin_date}{Begin date of the closest weather station.}
-#' \item{closest_station_end_date}{End date of the closest weather station.}
+#' \item{station_id}{Identifier of the closest weather station. Consists of 6-digit USAF and 5-digit WBAN identifier}
+#' \item{name}{Name of the closest weather station.}
+#' \item{country}{Country of the closest weather station. Note: NOAA don't use ISO country codes.}
+#' \item{elev}{Elevation of the closest weather station in meters.}
+#' \item{begin_date}{Begin date of the closest weather station.}
+#' \item{end_date}{End date of the closest weather station.}
 #' }
 #' 
 #' @examples \dontrun{
@@ -46,16 +43,13 @@ closest_weather_station <- function(latitude, longitude, stations, n = 1) {
   closest_distances <- distances[closest_indices]
   
   # Create a data frame with the closest station information and distances
-  result <- data.frame(latitude = latitude,
-                       longitude = longitude,
-                       distance = round(closest_distances, digits = 0),
-                       closest_station_usaf = closest_stations$usaf,
-                       closest_station_wban = closest_stations$wban,
-                       closest_station_name = closest_stations$name,
-                       closest_station_country = closest_stations$country,
-                       closest_station_elev = closest_stations$elev,
-                       closest_station_begin_date = closest_stations$begin_date,
-                       closest_station_end_date = closest_stations$end_date)
+  result <- data.frame(distance = round(closest_distances, digits = 0),
+                       station_id = closest_stations$station_id,
+                       name = closest_stations$name,
+                       country = closest_stations$country,
+                       elev = closest_stations$elev,
+                       begin_date = closest_stations$begin_date,
+                       end_date = closest_stations$end_date)
   
   return(result)
 }

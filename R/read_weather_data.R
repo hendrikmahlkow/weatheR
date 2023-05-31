@@ -21,7 +21,7 @@
 #' \item{rh}{Relative humidity in percent.}
 #' }
 #' 
-#' @example \dontrun{
+#' @examples \dontrun{
 #' # Read weather data from a file
 #' data <- read_weather_data("data/037070-99999-2017.gz")
 #' }
