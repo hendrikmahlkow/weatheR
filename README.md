@@ -6,6 +6,7 @@ This **R** package provides weather data for around 28,000 weather stations arou
 
 This package is largly inspired by the [stationaRy](https://github.com/rich-iannone/stationaRy) packagy by Richard Iannone. Currently, the package is not updated since 2020 and can't download recent years. This package is an attempt to provide a similar package that is updated and maintained. If Richard updates his package, go over to [stationaRy](https://github.com/rich-iannone/stationaRy) as it provides more functionality.
 
+Map of Stations:
 <div style="text-align:center"><img src="man/figures/map_stations.png" alt="Map of Stations" width="100%"></div>
 
 ## Documentation
