@@ -21,7 +21,7 @@ library(weatheR)
 To download all available weather stations, run the following code:
 
 ``` r
-stations = download_weather_stations(save_file = FALSE)
+stations = available_weather_stations(save_file = FALSE)
 
 stations
 #>       station_id                    name country state icao    lat    lon   elev begin_date   end_date
