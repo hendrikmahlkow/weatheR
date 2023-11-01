@@ -50,3 +50,4 @@ rsconnect/
 
 ._*
 man/figures/logo_weather.psd
+tests/precipitation_data_NOAA.R
